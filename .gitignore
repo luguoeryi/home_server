@@ -1,6 +1,6 @@
 # Dependency directory
-node_modules
-.idea
+/node_modules
+/.idea
 
 # production
 /dist
