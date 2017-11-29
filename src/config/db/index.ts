@@ -14,7 +14,7 @@ const pool = mysql.createPool({
 /**
  *
  * sql       sql语句
- * values    sql 中如果存在'？'那么 values原生替换
+ * values    sql 中对字符'?'进行替换
  *
  * **/
 export default (sql: string, values?: Array<any>) : Promise<any> => {
