@@ -1,11 +1,9 @@
-import * as express from "express"
-import { Response, Request } from "express"
-const app = express()
+/**
+ * Revised by petter on 2017/11/29.
+ */
 
-app.use("/", (req: Request, res: Response) => {
-    res.send('hello server')
-})
+import queryDb from './config/db/index'
 
-app.listen(3000, () => {
-    console.log('server lister')
+queryDb('SELECT * FROM homemanagement.home_base').then(rows => {
+    console.log('getData:', rows)
 })
