@@ -1,0 +1,21 @@
+{
+  "port": "8080",
+  "log": {
+    "log_name": "logs",
+    "log_path": "logs/"
+  },
+  "mysql": {
+    "development": {
+      "host" : "localhost",
+      "user" : "root",
+      "password" : "123456",
+      "database" : "homemanagement"
+    },
+    "production": {
+      "host" : "localhost",
+      "user" : "root",
+      "password" : "123456",
+      "database" : "homemanagement"
+    }
+  }
+}

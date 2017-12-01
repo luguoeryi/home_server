@@ -4,11 +4,15 @@
 
 import * as mysql from 'mysql'
 
+import config from './index'
+
+const mysqlConfig = config.get('mysql')[config.get('env')]
+
 const pool = mysql.createPool({
-    host : 'localhost',
-    user : 'root',
-    password : '123456',
-    database : 'homemanagement',
+    host : mysqlConfig['host'],
+    user : mysqlConfig['user'],
+    password : mysqlConfig['password'],
+    database : mysqlConfig['database'],
 })
 
 /**
